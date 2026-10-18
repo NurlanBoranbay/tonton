@@ -1,0 +1,43 @@
+video,gt_verdict,pred_verdict,verdict_match,gt_type,predicted_types,type_match,gt_t,timestamp_abs_error_sec,alarms
+X-1,violation,violation,1,cash_return_violation,cash_return_violation,1,22.0,1.6,cash_return_violation@20.4
+X-2,violation,violation,1,anonymous_cash_acceptance_violation,anonymous_cash_acceptance_violation,1,10.0,1.0,anonymous_cash_acceptance_violation@9.0
+Х-10,no_violation,no_violation,1,,,1,,,
+Х-11,violation,violation,1,left_key_violation,left_key_violation,1,18.0,0.5,left_key_violation@18.5
+Х-12,no_violation,no_violation,1,,,1,,,
+Х-13,violation,violation,1,uncounted_safe_deposit,uncounted_safe_deposit,1,47.0,0.8,uncounted_safe_deposit@47.8
+Х-14,no_violation,no_violation,1,,,1,,,
+Х-15,violation,violation,1,left_collection_bag_violation,left_collection_bag_violation,1,15.0,0.1,left_collection_bag_violation@14.9
+Х-16,no_violation,no_violation,1,,,1,,,
+Х-17,violation,violation,1,anonymous_incassator_violation,anonymous_incassator_violation,1,7.0,0.2,anonymous_incassator_violation@7.2
+Х-18,violation,violation,1,interrupted_transaction,anonymous_cash_acceptance_violation interrupted_transaction no_id_before_count_violation,1,20.0,4.4,anonymous_cash_acceptance_violation@6.7 no_id_before_count_violation@7.3 interrupted_transaction@15.6
+Х-19,violation,violation,1,anonymous_cash_acceptance_violation,anonymous_cash_acceptance_violation,1,7.0,0.4,anonymous_cash_acceptance_violation@6.6
+Х-20,violation,violation,1,open_safe_violation,open_safe_violation,1,5.0,3.3,open_safe_violation@1.7
+Х-21,no_violation,no_violation,1,,,1,,,
+Х-22,violation,violation,1,left_key_violation,left_key_violation,1,14.0,0.9,left_key_violation@14.9
+Х-23,no_violation,no_violation,1,,,1,,,
+Х-24,violation,violation,1,left_commodities_violation,left_commodities_violation,1,8.0,0.8,left_commodities_violation@8.8
+Х-25,no_violation,no_violation,1,,,1,,,
+Х-26,violation,violation,1,left_money_violation,left_money_violation,1,9.0,4.4,left_money_violation@13.4
+Х-27,no_violation,no_violation,1,,,1,,,
+Х-28,violation,violation,1,left_laptop_violation,left_laptop_violation,1,7.0,3.8,left_laptop_violation@10.8
+Х-29,no_violation,no_violation,1,,,1,,,
+Х-3,no_violation,no_violation,1,,,1,,,
+Х-30,violation,violation,1,open_door_violation_intruder,open_door_violation_intruder,1,13.0,0.6,open_door_violation_intruder@12.4
+Х-31,no_violation,no_violation,1,,,1,,,
+Х-32,violation,violation,1,open_door_violation,open_door_violation,1,5.0,2.0,open_door_violation@3.0
+Х-33,violation,violation,1,open_door_violation_intruder,open_door_violation open_door_violation_intruder,1,6.0,5.9,open_door_violation@3.0 open_door_violation_intruder@11.9
+Х-34,violation,violation,1,interrupted_transaction,interrupted_transaction no_id_before_count_violation,1,13.0,0.4,no_id_before_count_violation@7.5 interrupted_transaction@12.6
+Х-35,violation,violation,1,anonymous_cash_acceptance_violation,no_id_before_count_violation,0,7.0,1.4,no_id_before_count_violation@8.4
+Х-37,violation,violation,1,no_id_before_count_violation,no_id_before_count_violation,1,8.0,0.3,no_id_before_count_violation@8.3
+Х-38,violation,violation,1,interrupted_transaction,interrupted_transaction no_id_before_count_violation,1,33.0,7.8,no_id_before_count_violation@7.1 interrupted_transaction@25.2
+Х-39,violation,violation,1,no_id_before_count_violation,no_id_before_count_violation open_door_violation open_door_violation_intruder,1,7.0,0.3,no_id_before_count_violation@6.7 open_door_violation@51.6 open_door_violation_intruder@72.4
+Х-4,violation,violation,1,currency_intermix_violation,interrupted_transaction,0,57.0,5.8,interrupted_transaction@51.2
+Х-40,violation,violation,1,personal_belongings_violation,open_door_violation personal_belongings_violation,1,17.0,2.7,open_door_violation@2.6 personal_belongings_violation@14.3
+Х-43,no_violation,no_violation,1,,,1,,,
+Х-44,violation,violation,1,currency_intermix_violation,currency_intermix_violation,1,16.0,6.4,currency_intermix_violation@9.6
+Х-45,no_violation,no_violation,1,,,1,,,
+Х-46,violation,violation,1,beverage_violation,beverage_violation,1,11.0,0.1,beverage_violation@11.1
+Х-47,violation,violation,1,interrupted_transaction,interrupted_transaction,1,68.0,16.8,interrupted_transaction@51.2
+Х-48,no_violation,no_violation,1,,,1,,,
+Х-5,no_violation,no_violation,1,,,1,,,
+Х-8,no_violation,no_violation,1,,,1,,,

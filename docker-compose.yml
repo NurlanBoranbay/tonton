@@ -1,0 +1,21 @@
+services:
+  api:
+    build: .
+    image: tonton3
+    container_name: tonton3-api
+    restart: unless-stopped
+    ports:
+      - "8108:8108"
+    env_file: .env                     # API_KEY=...
+    environment:
+      PIPELINE_STRIDE: "3"             # analyse every 3rd frame (10 fps)
+      PIPELINE_DEVICE: "0"             # GPU index inside the container
+    volumes:
+      - ./weights:/app/weights:ro                              # tools/download_weights.sh
+      - ./service/custom_weights.txt:/app/service/custom_weights.txt:ro
+      - ./service/jobs:/app/service/jobs                       # uploaded videos and results
+    shm_size: 4g
+    deploy:
+      resources:
+        reservations:
+          devices: [{driver: nvidia, count: 1, capabilities: [gpu]}]

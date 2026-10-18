@@ -1,0 +1,1 @@
+weights/custom_y26s_all_stamp.pt

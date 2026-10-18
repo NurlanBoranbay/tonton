@@ -1,0 +1,7 @@
+.git
+.env
+weights/
+service/jobs/
+cache/
+runs/batch_*
+**/__pycache__
