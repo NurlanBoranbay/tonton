@@ -1,0 +1,739 @@
+2026-10-17T10:05:19Z INF Thank you for trying Cloudflare Tunnel. Doing so, without a Cloudflare account, is a quick way to experiment and try it out. However, be aware that these account-less Tunnels have no uptime guarantee, are subject to the Cloudflare Online Services Terms of Use (https://www.cloudflare.com/website-terms/), and Cloudflare reserves the right to investigate your use of Tunnels for violations of such terms. If you intend to use Tunnels in production you should use a pre-created named tunnel by following: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps
+2026-10-17T10:05:19Z INF Requesting new quick Tunnel on trycloudflare.com...
+2026-10-17T10:05:24Z INF +--------------------------------------------------------------------------------------------+
+2026-10-17T10:05:24Z INF |  Your quick Tunnel has been created! Visit it at (it may take some time to be reachable):  |
+2026-10-17T10:05:24Z INF |  https://dev-pulling-athens-amounts.trycloudflare.com                                      |
+2026-10-17T10:05:24Z INF +--------------------------------------------------------------------------------------------+
+2026-10-17T10:05:24Z INF Cannot determine default configuration path. No file [config.yml config.yaml] in [~/.cloudflared ~/.cloudflare-warp ~/cloudflare-warp /etc/cloudflared /usr/local/etc/cloudflared]
+2026-10-17T10:05:24Z INF Version 2026.3.0 (Checksum 4a9e50e6d6d798e90fcd01933151a90bf7edd99a0a55c28ad18f2e16263a5c30)
+2026-10-17T10:05:24Z INF GOOS: linux, GOVersion: go1.24.13, GoArch: amd64
+2026-10-17T10:05:24Z INF Settings: map[ha-connections:1 no-autoupdate:true protocol:quic url:http://localhost:8097]
+2026-10-17T10:05:24Z INF Generated Connector ID: 38ca5cd7-b265-4393-bfe9-0f1f91f8176e
+2026-10-17T10:05:24Z INF Initial protocol quic
+2026-10-17T10:05:24Z INF ICMP proxy will use 192.168.0.1 as source for IPv4
+2026-10-17T10:05:24Z INF ICMP proxy will use fe80::d855:48ff:feda:8b3b in zone br-56e1fc48c494 as source for IPv6
+2026-10-17T10:05:24Z WRN The user running cloudflared process has a GID (group ID) that is not within ping_group_range. You might need to add that user to a group within that range, or instead update the range to encompass a group the user is already in by modifying /proc/sys/net/ipv4/ping_group_range. Otherwise cloudflared will not be able to ping this network error="Group ID 1000 is not between ping group 1 to 0"
+2026-10-17T10:05:24Z WRN ICMP proxy feature is disabled error="cannot create ICMPv4 proxy: Group ID 1000 is not between ping group 1 to 0 nor ICMPv6 proxy: socket: permission denied"
+2026-10-17T10:05:24Z INF ICMP proxy will use 192.168.0.1 as source for IPv4
+2026-10-17T10:05:24Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveP256] connIndex=0 event=0 ip=198.41.200.63
+2026/10/17 15:05:24 failed to sufficiently increase receive buffer size (was: 208 kiB, wanted: 7168 kiB, got: 416 kiB). See https://github.com/quic-go/quic-go/wiki/UDP-Buffer-Sizes for details.
+2026-10-17T10:05:24Z INF ICMP proxy will use fe80::d855:48ff:feda:8b3b in zone br-56e1fc48c494 as source for IPv6
+2026-10-17T10:05:24Z INF Starting metrics server on 127.0.0.1:20241/metrics
+2026-10-17T10:05:25Z INF Registered tunnel connection connIndex=0 connection=e5e9ea2d-8306-44e3-8b81-3badc5aec74e event=0 ip=198.41.200.63 location=dme01 protocol=quic
+2026-10-17T10:06:21Z ERR  error="stream 53 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:06:21Z ERR Request failed error="stream 53 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/X-1.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T10:06:21Z ERR  error="stream 61 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:06:21Z ERR Request failed error="stream 61 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/X-1.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T10:06:25Z ERR  error="stream 81 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:06:25Z ERR Request failed error="stream 81 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/X-1.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T10:06:25Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:06:25Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-33.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T10:06:26Z ERR  error="stream 117 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:06:26Z ERR Request failed error="stream 117 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-34.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T10:06:26Z ERR  error="Error writing response header: stream 125 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:06:26Z ERR Request failed error="Error writing response header: stream 125 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-34.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T10:06:27Z ERR  error="stream 137 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:06:27Z ERR Request failed error="stream 137 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-33.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T10:06:36Z ERR  error="stream 153 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:06:36Z ERR Request failed error="stream 153 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-16.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T10:06:57Z ERR  error="stream 193 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:06:57Z ERR Request failed error="stream 193 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/X-1.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T10:07:17Z ERR  error="stream 265 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:07:17Z ERR Request failed error="stream 265 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/X-1.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T10:08:32Z ERR  error="stream 629 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:08:32Z ERR Request failed error="stream 629 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-15.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T10:08:33Z ERR  error="stream 641 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:08:33Z ERR Request failed error="stream 641 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-19.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T10:09:05Z ERR  error="stream 669 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:09:05Z ERR Request failed error="stream 669 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-26.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T10:09:09Z ERR  error="stream 705 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:09:09Z ERR Request failed error="stream 705 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/X-1.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T10:09:42Z ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:09:42Z ERR Request failed error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/api/ann?video=%D0%A5-16.mov&frame=120 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:09:42Z ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:09:42Z ERR Request failed error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/api/ann?video=X-1.mov&frame=4 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:09:44Z ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:09:44Z ERR Request failed error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/api/ann?video=%D0%A5-26.mov&frame=3 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:09:44Z ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:09:44Z ERR Request failed error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/api/ann?video=X-1.mov&frame=34 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:09:44Z ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:09:44Z ERR Request failed error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/api/ann?video=%D0%A5-26.mov&frame=2 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:09:44Z ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:09:44Z ERR Request failed error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/api/ann?video=%D0%A5-16.mov&frame=105 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:09:45Z ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:09:45Z ERR Request failed error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/api/ann?video=%D0%A5-26.mov&frame=1 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:09:45Z ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:09:45Z ERR Request failed error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/api/ann?video=X-1.mov&frame=64 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:09:45Z ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:09:45Z ERR Request failed error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/api/ann?video=%D0%A5-26.mov&frame=0 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:09:45Z ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:09:45Z ERR Request failed error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/api/ann?video=X-1.mov&frame=94 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:09:46Z ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:09:46Z ERR Request failed error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/api/ann?video=%D0%A5-16.mov&frame=89 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:09:46Z ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:09:46Z ERR Request failed error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/api/ann?video=X-1.mov&frame=124 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:09:47Z ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:09:47Z ERR Request failed error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/api/ann?video=X-1.mov&frame=154 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:09:47Z ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:09:47Z ERR Request failed error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/api/ann?video=X-1.mov&frame=184 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:09:47Z ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:09:47Z ERR Request failed error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/api/ann?video=%D0%A5-16.mov&frame=75 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:09:47Z ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:09:47Z ERR Request failed error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/api/ann?video=X-1.mov&frame=214 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:09:48Z ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:09:48Z ERR Request failed error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/api/ann?video=X-1.mov&frame=244 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:09:48Z ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:09:48Z ERR Request failed error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/api/ann?video=X-1.mov&frame=274 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:09:49Z ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:09:49Z ERR Request failed error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/api/ann?video=X-1.mov&frame=304 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:09:49Z ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:09:49Z ERR Request failed error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/api/ann?video=X-1.mov&frame=334 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:09:50Z ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:09:50Z ERR Request failed error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/api/ann?video=X-1.mov&frame=364 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:09:50Z ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:09:50Z ERR Request failed error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/api/ann?video=%D0%A5-26.mov&frame=30 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:09:50Z ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:09:50Z ERR Request failed error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/api/ann?video=X-1.mov&frame=394 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:09:51Z ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:09:51Z ERR Request failed error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/api/ann?video=%D0%A5-26.mov&frame=0 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:09:56Z ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:09:56Z ERR Request failed error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/api/ann?video=X-1.mov&frame=364 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:09:56Z ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:09:56Z ERR Request failed error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/api/ann?video=X-1.mov&frame=334 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:09:56Z ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:09:56Z ERR Request failed error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/api/ann?video=X-1.mov&frame=304 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:09:56Z ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:09:56Z ERR Request failed error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/api/ann?video=X-1.mov&frame=274 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:09:56Z ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:09:56Z ERR Request failed error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/api/ann?video=X-1.mov&frame=244 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:09:56Z ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:09:56Z ERR Request failed error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/api/save event=0 ip=198.41.200.63 type=http
+2026-10-17T10:09:56Z ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:09:56Z ERR Request failed error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/api/ann?video=X-1.mov&frame=214 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:09:57Z ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:09:57Z ERR Request failed error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/api/ann?video=X-1.mov&frame=184 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:09:57Z ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:09:57Z ERR Request failed error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/api/ann?video=X-1.mov&frame=154 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:09:57Z ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:09:57Z ERR Request failed error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/api/ann?video=X-1.mov&frame=124 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:09:57Z ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:09:57Z ERR Request failed error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/api/ann?video=X-1.mov&frame=94 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:09:57Z ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:09:57Z ERR Request failed error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/api/ann?video=X-1.mov&frame=64 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:09:58Z ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:09:58Z ERR Request failed error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/api/ann?video=X-1.mov&frame=34 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:10:00Z ERR  error="stream 1085 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:10:00Z ERR Request failed error="stream 1085 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-48.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T10:14:11Z ERR  error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:14:11Z ERR Request failed error="Unable to reach the origin service. The service may be down or it may not be responding to traffic from cloudflared: dial tcp 127.0.0.1:8097: connect: connection refused" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/api/save event=0 ip=198.41.200.63 type=http
+2026-10-17T10:15:07Z ERR  error="stream 6213 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:15:07Z ERR Request failed error="stream 6213 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-48.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T10:15:25Z ERR  error="stream 6297 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:15:25Z ERR Request failed error="stream 6297 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/X-1.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T10:17:34Z ERR  error="stream 7181 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:17:34Z ERR Request failed error="stream 7181 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-17.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T10:19:32Z ERR  error="stream 8173 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:19:32Z ERR Request failed error="stream 8173 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-48.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T10:21:21Z ERR  error="stream 8969 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:21:21Z ERR Request failed error="stream 8969 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-18.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T10:23:23Z ERR  error="stream 9473 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:23:23Z ERR Request failed error="stream 9473 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-26.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T10:26:12Z ERR  error="stream 10409 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:26:12Z ERR Request failed error="stream 10409 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/X-2.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T10:26:37Z ERR  error="stream 10537 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:26:37Z ERR Request failed error="stream 10537 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-19.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T10:27:25Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:27:25Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-16_f000570 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:27:25Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:27:25Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-16_f000540 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:27:25Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:27:25Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-18_f000030 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:27:25Z ERR  error="stream 12421 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:27:25Z ERR Request failed error="stream 12421 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-17_f000285 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:27:25Z ERR  error="stream 12429 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:27:25Z ERR Request failed error="stream 12429 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-18_f000255 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:27:25Z ERR  error="stream 12417 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:27:25Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:27:25Z ERR Request failed error="stream 12417 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-17_f000240 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:27:25Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-16_f000630 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:27:25Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:27:25Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-17_f000300 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:27:25Z ERR  error="stream 12441 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:27:25Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:27:25Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-17_f000420 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:27:25Z ERR Request failed error="stream 12441 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-18_f000060 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:27:25Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:27:25Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-18_f000570 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:27:25Z ERR  error="stream 12453 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:27:25Z ERR  error="stream 12449 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:27:25Z ERR Request failed error="stream 12449 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-18_f000450 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:27:25Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:27:25Z ERR Request failed error="stream 12453 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-18_f000375 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:27:25Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-18_f000195 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:27:25Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:27:25Z ERR  error="stream 12437 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:27:25Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-26_f000000 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:27:25Z ERR Request failed error="stream 12437 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-18_f000150 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:27:25Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:27:25Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-18_f000585 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:27:25Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:27:25Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-18_f000555 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:27:25Z ERR  error="stream 12433 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:27:25Z ERR Request failed error="stream 12433 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-18_f000000 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:27:25Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:27:25Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-18_f000675 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:27:25Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:27:25Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-18_f000330 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:27:25Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:27:25Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-18_f000135 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:27:25Z ERR  error="stream 12457 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:27:25Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:27:25Z ERR Request failed error="stream 12457 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-18_f000015 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:27:25Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:27:25Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-26_f000015 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:27:25Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-18_f000510 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:27:25Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:27:25Z ERR  error="stream 12461 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:27:25Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-17_f000330 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:27:25Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:27:25Z ERR  error="stream 12465 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:27:25Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-18_f000525 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:27:25Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:27:25Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-18_f000345 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:27:25Z ERR Request failed error="stream 12465 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-18_f000105 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:27:25Z ERR Request failed error="stream 12461 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-18_f000240 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:27:25Z ERR  error="stream 12425 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:27:25Z ERR Request failed error="stream 12425 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-17_f000255 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:27:25Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:27:25Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-18_f000120 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:27:25Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:27:25Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-18_f000540 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:27:25Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:27:25Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-17_f000315 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:27:25Z ERR  error="stream 12537 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:27:25Z ERR Request failed error="stream 12537 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-18_f000210 event=0 ip=198.41.200.63 type=http
+2026-10-17T10:27:46Z ERR  error="stream 12757 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:27:46Z ERR Request failed error="stream 12757 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/X-1.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T10:27:46Z ERR  error="stream 12773 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:27:46Z ERR Request failed error="stream 12773 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/X-1.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T10:29:08Z ERR  error="stream 13441 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:29:08Z ERR Request failed error="stream 13441 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-27.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T10:29:09Z ERR  error="stream 13449 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:29:09Z ERR Request failed error="stream 13449 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-27.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T10:29:09Z ERR  error="stream 13461 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:29:09Z ERR Request failed error="stream 13461 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-26.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T10:29:37Z ERR  error="stream 13557 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:29:37Z ERR Request failed error="stream 13557 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-27.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T10:39:18Z ERR  error="stream 16377 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:39:18Z ERR Request failed error="stream 16377 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-20.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T10:42:57Z ERR  error="stream 17677 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:42:57Z ERR Request failed error="stream 17677 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-21.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T10:43:46Z ERR  error="stream 17821 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T10:43:46Z ERR Request failed error="stream 17821 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-47.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T11:38:14Z ERR  error="stream 18593 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T11:38:14Z ERR Request failed error="stream 18593 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-47.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T11:43:09Z ERR  error="stream 20525 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T11:43:09Z ERR Request failed error="stream 20525 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-22.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T11:45:21Z ERR  error="stream 21649 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T11:45:21Z ERR Request failed error="stream 21649 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/X-1.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T11:45:52Z ERR  error="stream 22033 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T11:45:52Z ERR Request failed error="stream 22033 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-23.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T11:48:04Z ERR  error="stream 23173 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T11:48:04Z ERR Request failed error="stream 23173 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-24.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T11:50:05Z ERR  error="stream 24241 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T11:50:05Z ERR Request failed error="stream 24241 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-25.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T11:51:46Z ERR  error="stream 25133 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T11:51:46Z ERR Request failed error="stream 25133 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-28.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T11:54:21Z ERR  error="stream 26053 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T11:54:21Z ERR Request failed error="stream 26053 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-26.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T11:54:35Z ERR  error="stream 26109 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T11:54:35Z ERR Request failed error="stream 26109 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-15.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T11:54:36Z ERR  error="stream 26117 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T11:54:36Z ERR Request failed error="stream 26117 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-15.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T11:57:38Z ERR  error="stream 27497 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T11:57:38Z ERR Request failed error="stream 27497 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-14.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:01:34Z ERR  error="stream 28513 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:01:34Z ERR Request failed error="stream 28513 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-46.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:07:22Z ERR  error="stream 29845 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:07:22Z ERR Request failed error="stream 29845 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-45.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:09:18Z ERR  error="stream 30309 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:09:18Z ERR Request failed error="stream 30309 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-29.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:09:19Z ERR  error="stream 30317 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:09:19Z ERR Request failed error="stream 30317 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-28.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:15:34Z ERR  error="stream 32149 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:15:34Z ERR Request failed error="stream 32149 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/X-2.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:18:11Z ERR  error="stream 33001 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:18:11Z ERR Request failed error="stream 33001 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-44.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:18:54Z ERR  error="stream 33509 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:18:54Z ERR Request failed error="stream 33509 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-29.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:19:01Z ERR  error="stream 33565 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:19:01Z ERR Request failed error="stream 33565 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-13.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:19:02Z ERR  error="stream 33573 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:19:02Z ERR Request failed error="stream 33573 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-13.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:19:47Z ERR  error="stream 33649 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:19:47Z ERR Request failed error="stream 33649 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/X-2.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:19:49Z ERR  error="stream 33681 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:19:49Z ERR Request failed error="stream 33681 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-4.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:19:50Z ERR  error="stream 33685 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:19:50Z ERR Request failed error="stream 33685 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-3.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:20:09Z ERR  error="stream 33809 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:20:09Z ERR Request failed error="stream 33809 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-13.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:20:25Z ERR  error="stream 34005 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:20:25Z ERR Request failed error="stream 34005 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-28.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:22:07Z ERR  error="stream 34193 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:22:07Z ERR Request failed error="stream 34193 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-44.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:24:50Z ERR  error="stream 35189 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:24:50Z ERR Request failed error="stream 35189 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-4.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:24:59Z ERR  error="stream 35277 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:24:59Z ERR Request failed error="stream 35277 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-4.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:25:34Z ERR  error="stream 35493 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:25:34Z ERR Request failed error="stream 35493 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-43.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:26:19Z ERR  error="stream 35721 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:26:19Z ERR Request failed error="stream 35721 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-44.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:26:20Z ERR  error="stream 35733 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:26:20Z ERR Request failed error="stream 35733 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-44.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:26:20Z ERR  error="stream 35741 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:26:20Z ERR Request failed error="stream 35741 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-45.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:26:21Z ERR  error="stream 35753 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:26:21Z ERR Request failed error="stream 35753 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-45.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:26:21Z ERR  error="stream 35757 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:26:21Z ERR Request failed error="stream 35757 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-45.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:28:51Z ERR  error="stream 36833 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:28:51Z ERR Request failed error="stream 36833 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-12.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:28:52Z ERR  error="stream 36841 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:28:52Z ERR Request failed error="stream 36841 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-12.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:33:20Z ERR  error="stream 45629 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:33:20Z ERR Request failed error="stream 45629 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-11.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:33:32Z ERR  error="stream 45757 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:33:32Z ERR Request failed error="stream 45757 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-29.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:33:36Z ERR  error="stream 45797 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:33:36Z ERR Request failed error="stream 45797 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-5.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:33:37Z ERR  error="stream 45813 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:33:37Z ERR Request failed error="stream 45813 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-5.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:33:38Z ERR  error="stream 45833 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:33:38Z ERR Request failed error="stream 45833 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-11.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:37:19Z ERR  error="stream 47357 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:37:19Z ERR Request failed error="stream 47357 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-10.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:37:35Z ERR  error="stream 47413 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:37:35Z ERR Request failed error="stream 47413 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-4.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:37:37Z ERR  error="stream 47429 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:37:37Z ERR Request failed error="stream 47429 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-10.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:40:33Z ERR  error="stream 48085 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:40:33Z ERR Request failed error="stream 48085 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-5.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:40:38Z ERR  error="stream 48101 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:40:38Z ERR Request failed error="stream 48101 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-5.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:40:41Z ERR  error="stream 48149 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:40:41Z ERR Request failed error="stream 48149 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-5.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:41:14Z ERR  error="stream 48401 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:41:14Z ERR Request failed error="stream 48401 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-4.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:41:21Z ERR  error="stream 48465 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:41:21Z ERR Request failed error="stream 48465 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-5.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:42:03Z ERR  error="stream 48565 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:42:03Z ERR Request failed error="stream 48565 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-44.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:44:01Z ERR  error="stream 49237 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:44:01Z ERR Request failed error="stream 49237 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-31.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:44:05Z ERR  error="stream 49269 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:44:05Z ERR Request failed error="stream 49269 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-8.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:44:09Z ERR  error="stream 49297 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:44:09Z ERR Request failed error="stream 49297 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-31.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:45:16Z ERR  error="stream 49721 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:45:16Z ERR Request failed error="stream 49721 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-40.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:45:17Z ERR  error="stream 49729 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:45:17Z ERR Request failed error="stream 49729 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-43.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:46:37Z ERR  error="stream 50137 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:46:37Z ERR Request failed error="stream 50137 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-14.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:47:27Z ERR  error="stream 50373 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:47:27Z ERR Request failed error="stream 50373 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-31.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:49:14Z ERR  error="stream 51201 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:49:14Z ERR Request failed error="stream 51201 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-8.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:50:52Z ERR  error="stream 52273 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:50:52Z ERR Request failed error="stream 52273 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-32.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:51:21Z ERR  error="stream 52709 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:51:21Z ERR Request failed error="stream 52709 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-40.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:51:34Z ERR  error="stream 52769 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:51:34Z ERR Request failed error="stream 52769 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-43.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:51:59Z ERR  error="stream 53257 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:51:59Z ERR Request failed error="stream 53257 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-5.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:52:01Z ERR  error="stream 53297 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:52:01Z ERR Request failed error="stream 53297 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-32.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:52:03Z ERR  error="stream 53341 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:52:03Z ERR Request failed error="stream 53341 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-32.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:52:05Z ERR  error="stream 53373 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:52:05Z ERR Request failed error="stream 53373 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-31.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:52:07Z ERR  error="stream 53421 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:52:07Z ERR Request failed error="stream 53421 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-30.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:52:07Z ERR  error="stream 53429 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:52:07Z ERR Request failed error="stream 53429 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-30.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:52:09Z ERR  error="stream 53441 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:52:09Z ERR Request failed error="stream 53441 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-31.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:52:19Z ERR  error="stream 53513 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:52:19Z ERR Request failed error="stream 53513 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-39.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:53:07Z ERR  error="stream 53865 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:53:07Z ERR Request failed error="stream 53865 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-32.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:54:15Z ERR  error="stream 54493 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:54:15Z ERR Request failed error="stream 54493 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-33.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:55:34Z ERR  error="stream 54781 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:55:34Z ERR Request failed error="stream 54781 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-32.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:55:36Z ERR  error="stream 54797 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:55:36Z ERR Request failed error="stream 54797 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-33.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:55:44Z ERR  error="stream 54897 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:55:44Z ERR Request failed error="stream 54897 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-33.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:58:16Z ERR  error="stream 55793 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:58:16Z ERR Request failed error="stream 55793 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-38.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:58:19Z ERR  error="stream 55801 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:58:19Z ERR Request failed error="stream 55801 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-39.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T12:58:27Z ERR  error="stream 55837 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T12:58:27Z ERR Request failed error="stream 55837 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-37.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T13:00:08Z ERR  error="stream 56717 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:00:08Z ERR Request failed error="stream 56717 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-34.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T13:02:55Z ERR  error="stream 57941 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:02:55Z ERR Request failed error="stream 57941 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-35.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T13:04:19Z ERR  error="stream 58541 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:04:19Z ERR Request failed error="stream 58541 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-35.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T13:07:29Z ERR  error="stream 60001 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:07:29Z ERR Request failed error="stream 60001 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-37.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T13:07:33Z ERR  error="stream 60017 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:07:33Z ERR Request failed error="stream 60017 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-35.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T13:07:35Z ERR  error="stream 60041 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:07:35Z ERR Request failed error="stream 60041 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-35.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T13:07:35Z ERR  error="stream 60065 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:07:35Z ERR Request failed error="stream 60065 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-44.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T13:07:37Z ERR  error="stream 60081 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:07:37Z ERR Request failed error="stream 60081 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-45.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T13:15:25Z ERR  error="stream 74681 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:15:25Z ERR Request failed error="stream 74681 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-5.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T13:18:03Z ERR  error="stream 85481 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:18:03Z ERR Request failed error="stream 85481 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/X-1.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T13:25:05Z ERR  error="stream 86689 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:25:05Z ERR Request failed error="stream 86689 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-34.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T13:25:06Z ERR  error="stream 86697 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:25:06Z ERR Request failed error="stream 86697 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-34.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T13:25:06Z ERR  error="stream 86709 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:25:06Z ERR Request failed error="stream 86709 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-35.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T13:25:16Z ERR  error="stream 86777 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:25:16Z ERR Request failed error="stream 86777 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-37.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T13:25:17Z ERR  error="stream 86789 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:25:17Z ERR Request failed error="stream 86789 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-37.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T13:25:17Z ERR  error="stream 86801 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:25:17Z ERR Request failed error="stream 86801 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-38.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T13:25:18Z ERR  error="stream 86809 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:25:18Z ERR Request failed error="stream 86809 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-38.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T13:25:19Z ERR  error="stream 86813 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:25:19Z ERR Request failed error="stream 86813 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-38.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T13:25:29Z ERR  error="stream 86853 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:25:29Z ERR Request failed error="stream 86853 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-37.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T13:25:32Z ERR  error="stream 86877 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:25:32Z ERR Request failed error="stream 86877 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-39.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T13:25:33Z ERR  error="stream 86885 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:25:33Z ERR Request failed error="stream 86885 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-39.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T13:25:33Z ERR  error="stream 86893 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:25:33Z ERR Request failed error="stream 86893 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-38.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T13:25:43Z ERR  error="stream 86921 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:25:43Z ERR Request failed error="stream 86921 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-39.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T13:25:44Z ERR  error="stream 86933 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:25:44Z ERR Request failed error="stream 86933 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-39.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T13:25:44Z ERR  error="stream 86945 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:25:44Z ERR Request failed error="stream 86945 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-40.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T13:25:45Z ERR  error="stream 86957 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:25:45Z ERR Request failed error="stream 86957 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-40.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T13:25:46Z ERR  error="stream 86969 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:25:46Z ERR Request failed error="stream 86969 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-39.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T13:27:53Z ERR  error="stream 87241 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:27:53Z ERR Request failed error="stream 87241 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-39.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T13:27:54Z ERR  error="stream 87249 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:27:54Z ERR Request failed error="stream 87249 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-39.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T13:27:54Z ERR  error="stream 87253 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:27:54Z ERR Request failed error="stream 87253 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-38.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T13:27:55Z ERR  error="stream 87265 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:27:55Z ERR Request failed error="stream 87265 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-38.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T13:27:56Z ERR  error="stream 87269 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:27:56Z ERR Request failed error="stream 87269 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-38.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T13:28:00Z ERR  error="stream 87293 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:28:00Z ERR Request failed error="stream 87293 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-39.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T13:46:49Z ERR  error="stream 99421 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:46:49Z ERR Request failed error="stream 99421 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-14.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T13:46:49Z ERR  error="stream 99429 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:46:49Z ERR Request failed error="stream 99429 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/video/%D0%A5-15.mov event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 102777 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 102777 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-21_f000555 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 102781 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 102781 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-21_f000570 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 102565 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 102565 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-20_f000180 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 102813 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 102813 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-22_f000136 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 102837 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 102837 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-22_f000301 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 102801 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 102801 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-22_f000046 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 102925 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 102925 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-23_f000015 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 102841 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 102825 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 102841 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-22_f000196 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 102797 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 102825 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-22_f000166 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 102797 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-22_f000031 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 102861 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 102861 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-22_f000256 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 102881 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 102881 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-22_f000361 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 102905 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 102905 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-22_f000601 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 102857 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 102917 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 102917 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-23_f000030 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 102857 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-22_f000271 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 102913 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 102913 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-22_f000556 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 102561 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 102561 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-20_f000210 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 102809 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 102805 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 102809 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-22_f000091 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 102805 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-22_f000061 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 102873 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 102873 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-22_f000346 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 102885 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 102885 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-22_f000436 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 102817 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 102833 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 102817 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-22_f000076 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103065 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103065 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-25_f000270 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 102833 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-22_f000151 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103005 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 102973 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 102973 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-25_f000015 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 103005 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-23_f000540 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 102985 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 102985 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-23_f000315 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103021 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103021 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-24_f000180 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103069 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 102969 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 103017 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103069 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-25_f000165 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 102945 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 102969 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-25_f000150 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103053 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 102961 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 102929 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 102929 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-22_f000406 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 102945 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-23_f000120 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 102961 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-24_f000375 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 103017 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-23_f000330 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 103053 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-24_f000435 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103037 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 102893 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103037 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-24_f000060 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 102989 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 102893 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-22_f000526 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103049 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 102989 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-23_f000420 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103029 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 103025 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103029 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-24_f000135 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 103025 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-24_f000105 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 102877 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 103073 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 103081 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 102877 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-22_f000331 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 103073 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-25_f000300 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 103081 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-25_f000045 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 102897 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 102993 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 103041 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 102897 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-22_f000496 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 102993 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-23_f000495 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 103041 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-24_f000300 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 102997 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 102849 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 103013 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 102949 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 102997 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-24_f000000 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 103049 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-24_f000240 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 102865 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 102849 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-22_f000451 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 102949 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-23_f000240 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 103013 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-24_f000090 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 102865 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-22_f000316 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 102909 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 103057 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103057 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-24_f000285 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 102909 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-22_f000466 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 102977 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 102821 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 102977 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-23_f000544 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 102821 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-22_f000106 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103077 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103077 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-25_f000315 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103273 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103273 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-29_f000300 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103325 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 103089 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103089 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-25_f000075 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 103325 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-27_f000270 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103161 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103161 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-29_f000285 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103157 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103157 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-25_f000795 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103297 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103297 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-3_f000240 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103269 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 103261 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 103201 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 103177 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 103277 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103261 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-3_f000150 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 103177 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-28_f000180 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 103269 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-3_f000210 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103249 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103201 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-27_f000120 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103205 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103205 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-27_f000105 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103257 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 103113 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103257 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-29_f000120 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 103113 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-25_f000330 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 102981 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-29_f000405 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 102981 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-23_f000435 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 103277 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-26_f000360 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103189 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103189 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-27_f000180 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 103249 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-27_f000645 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103145 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103145 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-26_f000120 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 102941 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 102941 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-23_f000090 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-3_f000045 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103129 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103129 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-25_f000690 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 102965 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 102965 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-24_f000345 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103221 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103221 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-27_f000150 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103209 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 103329 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-3_f000105 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 103329 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-29_f000225 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103193 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103193 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-27_f000615 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103265 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 103173 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103265 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-28_f000255 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 103173 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-3_f000195 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103105 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 102901 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 103169 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 102901 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-22_f000511 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 103209 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-27_f000240 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-28_f000465 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 102921 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 102921 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-23_f000000 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 103105 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-25_f000825 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 103245 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-3_f000255 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 103245 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-29_f000255 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103141 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103141 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-26_f000390 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 103169 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-29_f000270 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103153 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 103165 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103153 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-26_f000300 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103213 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103165 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-26_f000015 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 103213 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-27_f000285 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 102937 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 103185 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 102937 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-23_f000045 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 103185 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-27_f000195 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 103093 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 103033 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-29_f000195 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103229 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 103097 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103097 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-25_f000510 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103241 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103229 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-27_f000525 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 103093 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-25_f000390 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 103033 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-24_f000420 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 103241 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-29_f000315 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103121 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 103233 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103121 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-25_f000930 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 103233 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-29_f000165 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103293 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103293 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-26_f000570 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103009 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103009 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-24_f000045 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103333 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 103133 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103333 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-3_f000360 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103101 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103133 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-27_f000390 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103101 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-25_f000570 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103253 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-3_f000225 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 103253 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-29_f000420 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103197 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 103137 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103197 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-27_f000000 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103237 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103137 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-26_f000165 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103109 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103237 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-27_f000660 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103149 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103109 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-26_f000075 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 103149 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-26_f000525 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 102933 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 102933 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-23_f000060 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103117 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 103045 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 103125 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103117 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-25_f000735 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 103045 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-24_f000165 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 103125 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-25_f000675 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 102957 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 103001 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 102957 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-23_f000255 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 103001 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-24_f000150 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103061 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 103217 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103061 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-25_f000090 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 102953 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103217 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-27_f000790 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 102953 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-23_f000150 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 102869 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 102889 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 102889 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-22_f000421 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 102869 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-22_f000376 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR  error="stream 103225 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-3_f000510 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="Incoming request ended abruptly: context canceled" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="Incoming request ended abruptly: context canceled" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-27_f000450 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR Request failed error="stream 103225 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-27_f000075 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103085 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103085 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-25_f000195 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103305 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103305 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-29_f000390 event=0 ip=198.41.200.63 type=http
+2026-10-17T13:54:25Z ERR  error="stream 103181 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://localhost:8097
+2026-10-17T13:54:25Z ERR Request failed error="stream 103181 canceled by remote with error code 0" connIndex=0 dest=https://dev-pulling-athens-amounts.trycloudflare.com/img/X-29_f000514 event=0 ip=198.41.200.63 type=http
+2026-10-17T15:46:37Z INF Initiating graceful shutdown due to signal terminated ...
+2026-10-17T15:46:37Z ERR failed to run the datagram handler error="context canceled" connIndex=0 event=0 ip=198.41.200.63
+2026-10-17T15:46:37Z ERR failed to serve tunnel connection error="accept stream listener encountered a failure while serving" connIndex=0 event=0 ip=198.41.200.63
+2026-10-17T15:46:37Z ERR Serve tunnel error error="accept stream listener encountered a failure while serving" connIndex=0 event=0 ip=198.41.200.63
+2026-10-17T15:46:37Z INF Retrying connection in up to 1s connIndex=0 event=0 ip=198.41.200.63
+2026-10-17T15:46:37Z ERR Connection terminated connIndex=0
+2026-10-17T15:46:37Z ERR no more connections active and exiting
+2026-10-17T15:46:37Z INF Tunnel server stopped
+2026-10-17T15:46:37Z INF Metrics server stopped

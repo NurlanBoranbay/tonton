@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Annotation Review</title>
+<style>
+:root{--bg:#f4f5f7;--panel:#fff;--line:#dfe2e7;--text:#1d2330;--muted:#677084;--accent:#a3195b}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#14171d;--panel:#1c2028;--line:#2c323d;--text:#e6e9ef;--muted:#9aa3b5;--accent:#e0498f}}
+:root[data-theme="dark"]{--bg:#14171d;--panel:#1c2028;--line:#2c323d;--text:#e6e9ef;--muted:#9aa3b5;--accent:#e0498f}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:14px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header{position:sticky;top:0;z-index:2;display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:10px 16px;background:var(--panel);border-bottom:1px solid var(--line)}
+h1{font-size:15px;margin:0}
+a{color:var(--accent)}
+select,input{font:inherit;color:var(--text);background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:4px 8px}
+.muted{color:var(--muted);font-size:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;padding:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.card canvas{width:100%;display:block;cursor:zoom-in}
+.meta{padding:6px 8px;font-size:12px}
+.meta b{font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px}
+.chip{font-size:11px;padding:0 6px;border-radius:9px;color:#000}
+.big{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:5;cursor:zoom-out}
+.big canvas{max-width:95vw;max-height:95vh}
+.empty{padding:40px;text-align:center;color:var(--muted)}
+</style>
+</head>
+<body>
+<header>
+  <h1>Annotation Review</h1>
+  <span class="muted" id="sum"></span>
+  <label class="muted">video <select id="fv"><option value="">all</option></select></label>
+  <label class="muted">class <select id="fc"><option value="">all</option></select></label>
+  <span style="flex:1"></span>
+  <a href="/">← back to annotator</a>
+</header>
+<div class="grid" id="grid"></div>
+<div class="big" id="big"><canvas id="bigc"></canvas></div>
+<script>
+const COLORS=["#e6194b","#3cb44b","#4363d8","#f58231","#911eb4","#42d4f4","#f032e6","#bfef45","#ffe119","#aaffc3"];
+let D=null;
+function drawOn(cv, img, boxes, scale){
+  cv.width=img.naturalWidth*scale; cv.height=img.naturalHeight*scale;
+  const c=cv.getContext("2d"); c.drawImage(img,0,0,cv.width,cv.height);
+  c.lineWidth=Math.max(2,3*scale); c.font=`600 ${Math.max(11,14*scale)}px system-ui,sans-serif`;
+  for(const b of boxes){
+    const x=(b.x-b.w/2)*cv.width,y=(b.y-b.h/2)*cv.height,w=b.w*cv.width,h=b.h*cv.height;
+    c.strokeStyle=COLORS[b.c]; c.strokeRect(x,y,w,h);
+    const t=D.classes[b.c], tw=c.measureText(t).width+6, th=Math.max(13,16*scale);
+    c.fillStyle=COLORS[b.c]; c.fillRect(x,Math.max(0,y-th),tw,th); c.fillStyle="#000"; c.fillText(t,x+3,Math.max(th-3,y-3));
+  }
+}
+function render(){
+  const fv=document.getElementById("fv").value, fc=document.getElementById("fc").value;
+  const items=D.items.filter(r=>(!fv||r.video===fv)&&(fc===""||r.boxes.some(b=>String(b.c)===fc)));
+  const g=document.getElementById("grid");
+  if(!items.length){g.innerHTML='<div class="empty">No saved frames match.</div>';return;}
+  g.innerHTML="";
+  for(const r of items){
+    const card=document.createElement("div"); card.className="card";
+    const cv=document.createElement("canvas"); card.appendChild(cv);
+    const counts={}; r.boxes.forEach(b=>counts[b.c]=(counts[b.c]||0)+1);
+    card.insertAdjacentHTML("beforeend",`<div class="meta"><b>${r.video}</b> · frame ${r.frame} · ${r.time.toFixed(2)} s<br>
+      <span class="muted">${r.user||"no name"} · ${r.saved_at}</span>
+      <div class="chips">${Object.entries(counts).map(([c,n])=>`<span class="chip" style="background:${COLORS[c]}">${D.classes[c]}${n>1?" ×"+n:""}</span>`).join("")||'<span class="muted">no objects</span>'}</div></div>`);
+    g.appendChild(card);
+    const img=new Image(); img.onload=()=>{ drawOn(cv,img,r.boxes,0.5);
+      cv.onclick=()=>{ drawOn(document.getElementById("bigc"),img,r.boxes,1.5); document.getElementById("big").style.display="flex"; }; };
+    img.src="/img/"+encodeURIComponent(r.stem);
+  }
+}
+document.getElementById("big").onclick=e=>e.currentTarget.style.display="none";
+fetch("/api/all").then(r=>r.json()).then(d=>{
+  D=d;
+  const vids=[...new Set(d.items.map(r=>r.video))];
+  document.getElementById("fv").insertAdjacentHTML("beforeend",vids.map(v=>`<option>${v}</option>`).join(""));
+  document.getElementById("fc").insertAdjacentHTML("beforeend",d.classes.map((c,i)=>`<option value="${i}">${c}</option>`).join(""));
+  const nb=d.items.reduce((a,r)=>a+r.boxes.length,0);
+  document.getElementById("sum").textContent=`${d.items.length} frames · ${nb} boxes · ${vids.length} videos`;
+  ["fv","fc"].forEach(id=>document.getElementById(id).onchange=render);
+  render();
+});
+</script>
+</body>
+</html>

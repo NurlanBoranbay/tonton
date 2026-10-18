@@ -1,0 +1,116 @@
+{
+ "scene": {
+  "people_win_sec": 0.5,
+  "people_absent_sec": 1.0,
+  "relink_gap_sec": 2.0,
+  "relink_iou": 0.2,
+  "cashier_min_presence_sec": 3.0,
+  "seat_radius_px": 90,
+  "seated_height_to_torso": 2.6,
+  "ankle_visibility_min": 0.3,
+  "door_gap_sec": 1.0,
+  "door_min_sec": 0.5,
+  "safe_gap_sec": 1.0,
+  "safe_min_sec": 0.5,
+  "id_min_hits": 3,
+  "id_gap_sec": 2.0,
+  "palm_reach": 0.3,
+  "machine_margin_px": 4,
+  "count_samples": 5,
+  "reach_gap_sec": 0.4,
+  "money_link_px": 45,
+  "laptop_luma_on": 130,
+  "laptop_luma_off": 120,
+  "near_px": 40,
+  "door_pass_cover": 0.7
+ },
+ "rules": {
+  "personal_belongings_violation": {
+   "enabled": true,
+   "dwell_sec": 9.0,
+   "near_px": 40,
+   "gap_sec": 4.0,
+   "bag_window_sec": 2.0
+  },
+  "beverage_violation": {
+   "enabled": true,
+   "min_sec": 1.5,
+   "near_px": 40,
+   "gap_sec": 1.0
+  },
+  "cash_return_violation": {
+   "enabled": true,
+   "min_samples": 10,
+   "near_px": 15,
+   "include_id": 0,
+   "palm_reach": 0.0
+  },
+  "anonymous_cash_acceptance_violation": {
+   "enabled": true,
+   "reach_samples": 2,
+   "reach_window_sec": 3.0,
+   "money_samples": 10,
+   "initial_sec": 1.0,
+   "id_tolerance_sec": 0.5
+  },
+  "uncounted_safe_deposit": {
+   "enabled": true,
+   "money_samples": 10,
+   "initial_sec": 1.0,
+   "before_sec": 2.0
+  },
+  "currency_intermix_violation": {
+   "enabled": true,
+   "window_sec": 6.0,
+   "leave_min_sec": 1.0,
+   "merge_px": 10,
+   "pile_samples": 10
+  },
+  "open_door_violation": {
+   "enabled": true,
+   "min_open_sec": 8.0,
+   "pass_samples": 3
+  },
+  "open_door_violation_intruder": {
+   "enabled": true,
+   "min_open_sec": 5.0,
+   "head_samples": 3,
+   "body_cover": 0.85
+  },
+  "interrupted_transaction": {
+   "enabled": true,
+   "pass_samples": 2
+  },
+  "open_safe_violation": {
+   "enabled": true,
+   "lead_sec": 1.0,
+   "tail_sec": 0.5
+  },
+  "anonymous_incassator_violation": {
+   "enabled": true,
+   "visitor_min_sec": 2.0,
+   "bag_samples": 5,
+   "leave_margin_sec": 0.5
+  },
+  "left_key_violation": {
+   "enabled": true,
+   "min_share": 0.5
+  },
+  "left_collection_bag_violation": {
+   "enabled": true,
+   "min_share": 0.5
+  },
+  "left_money_violation": {
+   "enabled": true,
+   "min_share": 0.5
+  },
+  "left_laptop_violation": {
+   "enabled": true,
+   "min_share": 0.5
+  },
+  "left_commodities_violation": {
+   "enabled": true,
+   "min_share": 0.5
+  }
+ }
+}

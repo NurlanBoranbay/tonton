@@ -1,0 +1,42 @@
+W12_P1 212 calls
+0 X-1 0 1.04 ```json {"violations": [{"class_id": "C14", "start_sec": 2.0, "end_sec": 11.0, "evidence": "A second person (client) ent
+50 Х-13 1 1.46 ```json {"violations": []} ```
+100 Х-19 7 2.05 ```json {"violations": [{"class_id": "C14", "start_sec": 44, "end_sec": 53, "evidence": "An extra person (not the cashie
+150 Х-37 0 0.86 ```json {"violations": []} ```
+200 Х-47 10 0.81 ```json {"violations": []} ```
+W12_P2 212 calls
+0 X-1 0 2.52 ```json {"violations": [{"class_id": "C14", "start_sec": 2.0, "end_sec": 11.0, "evidence": "A man enters the cash room a
+50 Х-13 1 2.04 ```json {"violations": []} ```
+100 Х-19 7 2.02 ```json {"violations": [{"class_id": "C14", "start_sec": 44, "end_sec": 53, "evidence": "An extra person (not the cashie
+150 Х-37 0 2.56 ```json {"violations": [{"class_id": "C14", "start_sec": 2.0, "end_sec": 7.0, "evidence": "A person who is not the cashi
+200 Х-47 10 0.78 ```json {"violations": []} ```
+W12c_P1 208 calls
+0 X-2 0 2.19 ```json {"violations": [{"class_id": "C14", "start_sec": 2.0, "end_sec": 8.0, "evidence": "A person (client) enters the 
+50 Х-13 5 2.12 ```json {"violations": []} ```
+100 Х-21 1 0.84 ```json {"violations": []} ```
+150 Х-38 2 1.45 ```json {"violations": []} ```
+200 Х-48 3 0.8 ```json {"violations": []} ```
+W16_P1 329 calls
+0 X-1 0 2.64 ```json {"violations": [{"class_id": "C14", "start_sec": 1.5, "end_sec": 5.0, "evidence": "An extra person (client) ente
+50 Х-8 3 1.42 ```json {"violations": []} ```
+100 Х-14 9 1.47 ```json {"violations": []} ```
+150 Х-19 7 1.47 ```json {"violations": []} ```
+200 Х-30 2 2.05 ```json {"violations": [{"class_id": "C14", "start_sec": 12.0, "end_sec": 15.5, "evidence": "A second person (male) ente
+250 Х-39 1 1.44 ```json {"violations": []} ```
+300 Х-47 5 0.79 ```json {"violations": []} ```
+OV_P1 42 calls
+0 X-1 0 2.12 ```json {"violations": []} ```
+OV_P2 42 calls
+0 X-1 0 1.46 ```json {"violations": []} ```
+OV_P1_think 42 calls
+0 X-1 0 38.32 thought The user wants me to audit a video represented by a grid of frames for cash-discipline violations.  **1. Analyze
+W12_P1_think 208 calls
+0 X-2 0 12.55 thought The user wants me to audit a CCTV video sequence for cash-discipline violations.  **Frames Analysis:** - **0s:**
+50 Х-13 5 16.83 thought The user wants me to audit a sequence of CCTV frames for cash-discipline violations.  1.  **Analyze the frames:*
+100 Х-21 1 11.89 thought The user wants me to audit a sequence of CCTV frames for cash-discipline violations.  **Frames Analysis:** - **6
+150 Х-38 2 15.19 thought The user wants me to audit a sequence of CCTV frames for cash-discipline violations.  1.  **Analyze the frames:*
+200 Х-48 3 11.41 thought The user wants me to audit a sequence of CCTV frames for cash-discipline violations.  **Frames Analysis:** - **1
+CAND_P1 42 calls
+0 X-1 0 2.06 ```json {"violations": []} ```
+CAND_P1_think 42 calls
+0 X-1 0 8.83 thought The user wants me to audit a sequence of CCTV frames for cash-discipline violations.  **Frames Analysis:** - **1

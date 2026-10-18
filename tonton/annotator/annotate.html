@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cash Desk Annotator</title>
+<style>
+:root{
+  --bg:#f4f5f7; --panel:#ffffff; --line:#dfe2e7; --text:#1d2330; --muted:#677084;
+  --accent:#a3195b; --accent-ink:#ffffff; --ok:#1f8a4c; --warn:#c0392b; --chip:#eef0f4;
+  --stage:#11141a;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#14171d; --panel:#1c2028; --line:#2c323d; --text:#e6e9ef; --muted:#9aa3b5;
+    --accent:#e0498f; --accent-ink:#ffffff; --ok:#3ccf7a; --warn:#ff6b5e; --chip:#262b35; --stage:#0b0d11;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#14171d; --panel:#1c2028; --line:#2c323d; --text:#e6e9ef; --muted:#9aa3b5;
+  --accent:#e0498f; --accent-ink:#ffffff; --ok:#3ccf7a; --warn:#ff6b5e; --chip:#262b35; --stage:#0b0d11;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--text);font:14px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;display:flex;flex-direction:column}
+header{display:flex;align-items:center;gap:12px;padding:8px 14px;background:var(--panel);border-bottom:1px solid var(--line)}
+header h1{font-size:15px;margin:0;font-weight:650}
+header .sp{flex:1}
+header input{width:140px}
+input,select,button{font:inherit;color:var(--text);background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:5px 8px}
+button{cursor:pointer}
+button:hover{border-color:var(--muted)}
+button.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:600}
+button.danger{color:var(--warn)}
+main{flex:1;display:grid;grid-template-columns:230px 1fr 290px;min-height:0}
+aside{background:var(--panel);border-right:1px solid var(--line);display:flex;flex-direction:column;min-height:0}
+aside.right{border-right:0;border-left:1px solid var(--line);overflow:auto;padding:10px 12px}
+.vfilter{margin:8px}
+.vlist{overflow:auto;flex:1}
+.vitem{display:flex;align-items:center;gap:6px;padding:6px 10px;border-bottom:1px solid var(--line);cursor:pointer}
+.vitem:hover{background:var(--chip)}
+.vitem.active{background:var(--chip);box-shadow:inset 3px 0 0 var(--accent)}
+.vitem .n{font-weight:600;min-width:52px}
+.tag{font-size:11px;padding:1px 6px;border-radius:10px;background:var(--chip);color:var(--muted);white-space:nowrap}
+.tag.viol{color:var(--warn)}
+.badge{margin-left:auto;font-size:11px;color:var(--ok);font-weight:600}
+.center{display:flex;flex-direction:column;min-width:0;min-height:0}
+.stagebox{flex:1;overflow:auto;background:var(--stage);display:flex;justify-content:center;align-items:flex-start;padding:10px}
+.wrap{position:relative;flex:none}
+.wrap video,.wrap canvas{position:absolute;inset:0;width:100%;height:100%}
+.wrap canvas{cursor:crosshair}
+.controls{background:var(--panel);border-top:1px solid var(--line);padding:8px 12px;display:flex;flex-direction:column;gap:6px}
+.row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.tl{position:relative;height:26px;background:var(--chip);border-radius:6px;cursor:pointer;flex:1}
+.tl .head{position:absolute;top:0;bottom:0;width:2px;background:var(--text)}
+.tl .tick{position:absolute;top:14px;bottom:2px;width:2px;background:var(--ok)}
+.tl .viol{position:absolute;top:2px;height:10px;width:10px;margin-left:-5px;border-radius:50%;background:var(--warn)}
+.mono{font-variant-numeric:tabular-nums;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.status{font-size:12px;color:var(--muted)}
+.status.dirty{color:var(--warn);font-weight:600}
+.status.saved{color:var(--ok);font-weight:600}
+h3{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:14px 0 6px}
+h3:first-child{margin-top:2px}
+.cls{display:flex;align-items:center;gap:8px;padding:4px 6px;border-radius:6px;cursor:pointer}
+.cls:hover{background:var(--chip)}
+.cls.active{background:var(--chip);outline:2px solid var(--accent)}
+.sw{width:14px;height:14px;border-radius:3px;flex:none}
+.cls .k{font-size:11px;color:var(--muted);width:12px}
+.cls .ru{font-size:11px;color:var(--muted)}
+.cls .cnt{margin-left:auto;font-size:11px;color:var(--muted)}
+.blist .b{display:flex;align-items:center;gap:6px;font-size:12px;padding:3px 6px;border-radius:5px;cursor:pointer}
+.blist .b.sel{background:var(--chip)}
+.blist .b button{margin-left:auto;padding:0 6px;font-size:11px}
+.help{font-size:12px;color:var(--muted)}
+.help kbd{font-family:ui-monospace,monospace;font-size:11px;background:var(--chip);border:1px solid var(--line);border-radius:4px;padding:0 4px;color:var(--text)}
+.help td{padding:1px 6px 1px 0;vertical-align:top}
+.toast{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);background:var(--text);color:var(--bg);padding:8px 14px;border-radius:8px;font-size:13px;opacity:0;transition:opacity .2s;pointer-events:none}
+.toast.on{opacity:.95}
+.empty{color:var(--muted);padding:40px;text-align:center}
+@media (max-width:900px){main{grid-template-columns:1fr}aside{max-height:180px}aside.right{max-height:none}}
+</style>
+</head>
+<body>
+<header>
+  <h1>Cash Desk Annotator</h1>
+  <span class="status mono" id="hdrStats"></span>
+  <span class="sp"></span>
+  <a href="/review" target="_blank" style="color:var(--accent)">Review saved frames ↗</a>
+  <label class="status">Annotator <input id="user" placeholder="your name"></label>
+  <button id="themeBtn" title="Toggle theme">◐</button>
+</header>
+<main>
+  <aside>
+    <input class="vfilter" id="vfilter" placeholder="Filter videos…">
+    <div class="vlist" id="vlist"></div>
+  </aside>
+
+  <section class="center">
+    <div class="stagebox" id="stagebox">
+      <div class="wrap" id="wrap">
+        <video id="video" preload="auto" playsinline muted></video>
+        <canvas id="cv"></canvas>
+      </div>
+      <div class="empty" id="emptyMsg">Pick a video on the left.</div>
+    </div>
+    <div class="controls">
+      <div class="row">
+        <div class="tl" id="tl"><div class="head" id="tlHead"></div></div>
+      </div>
+      <div class="row">
+        <button id="playBtn" title="Space">▶</button>
+        <button data-step="-30" title="Shift+←">−1s</button>
+        <button data-step="-1" title="←">−1f</button>
+        <button data-step="1" title="→">+1f</button>
+        <button data-step="30" title="Shift+→">+1s</button>
+        <button id="violBtn" title="J">Jump to violation</button>
+        <span class="mono" id="pos">—</span>
+        <span class="status" id="frameStatus"></span>
+        <span style="flex:1"></span>
+        <label class="status">after save
+          <select id="advance">
+            <option value="0">stay</option>
+            <option value="5">+5 f</option>
+            <option value="15" selected>+15 f (0.5 s)</option>
+            <option value="30">+30 f (1 s)</option>
+            <option value="60">+60 f (2 s)</option>
+          </select>
+        </label>
+        <label class="status"><input type="checkbox" id="carry" checked> carry boxes</label>
+        <button id="zoomOut" title="−">−</button><span class="mono" id="zoomLbl">100%</span><button id="zoomIn" title="+">+</button>
+        <button class="danger" id="delBtn" title="Delete the saved annotation of this frame">Delete frame</button>
+        <button class="primary" id="saveBtn" title="S">Save frame</button>
+      </div>
+    </div>
+  </section>
+
+  <aside class="right">
+    <h3>Classes</h3>
+    <div id="clist"></div>
+    <h3>Boxes on this frame</h3>
+    <div class="blist" id="blist"><span class="status">none</span></div>
+    <h3>Dataset</h3>
+    <div class="status" id="dsInfo"></div>
+    <h3>Shortcuts</h3>
+    <table class="help">
+      <tr><td><kbd>1</kbd>–<kbd>9</kbd>, <kbd>0</kbd></td><td>pick class (or re-class the selected box)</td></tr>
+      <tr><td>drag</td><td>draw a box · drag a box to move · drag a corner to resize</td></tr>
+      <tr><td><kbd>Space</kbd></td><td>play / pause</td></tr>
+      <tr><td><kbd>←</kbd> <kbd>→</kbd></td><td>one frame (<kbd>Shift</kbd> = 1 s)</td></tr>
+      <tr><td><kbd>[</kbd> <kbd>]</kbd></td><td>previous / next saved frame</td></tr>
+      <tr><td><kbd>J</kbd></td><td>jump to the labelled violation</td></tr>
+      <tr><td><kbd>S</kbd></td><td>save frame (no boxes = negative example)</td></tr>
+      <tr><td><kbd>C</kbd></td><td>copy boxes from the last saved frame</td></tr>
+      <tr><td><kbd>Del</kbd></td><td>delete selected box</td></tr>
+      <tr><td><kbd>Esc</kbd></td><td>deselect</td></tr>
+      <tr><td><kbd>H</kbd></td><td>hide / show boxes</td></tr>
+      <tr><td><kbd>+</kbd> <kbd>−</kbd></td><td>zoom</td></tr>
+    </table>
+  </aside>
+</main>
+<div class="toast" id="toast"></div>
+
+<script>
+const COLORS = ["#e6194b","#3cb44b","#4363d8","#f58231","#911eb4","#42d4f4","#f032e6","#bfef45","#ffe119","#aaffc3"];
+const $ = id => document.getElementById(id);
+const video = $("video"), cv = $("cv"), ctx = cv.getContext("2d"), wrap = $("wrap");
+const store = { get(k, d){ try { const v = localStorage.getItem(k); return v === null ? d : v; } catch(e){ return d; } },
+                set(k, v){ try { localStorage.setItem(k, v); } catch(e){} } };
+
+let CFG = null, cur = null;            // config, current video object
+let cls = 0, boxes = [], sel = -1;     // boxes: {c, x1,y1,x2,y2} normalised 0..1
+let dirty = false, hidden = false, zoom = 1;
+let drag = null;                       // {mode:'new'|'move'|'resize', ...}
+let lastLoadedFrame = -1;
+
+// ---------- theme / user ----------
+(function(){
+  const t = store.get("theme", "");
+  if (t) document.documentElement.setAttribute("data-theme", t);
+  $("themeBtn").onclick = () => {
+    const dark = getComputedStyle(document.documentElement).getPropertyValue("--bg").trim().startsWith("#1");
+    const next = dark ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next); store.set("theme", next);
+  };
+  $("user").value = store.get("user", "");
+  $("user").onchange = e => store.set("user", e.target.value.trim());
+  $("advance").value = store.get("advance", "15");
+  $("advance").onchange = e => store.set("advance", e.target.value);
+})();
+
+function toast(msg){ const t = $("toast"); t.textContent = msg; t.classList.add("on"); clearTimeout(t._h); t._h = setTimeout(()=>t.classList.remove("on"), 1600); }
+async function api(path, body){
+  const r = await fetch(path, body ? {method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify(body)} : {});
+  const j = await r.json(); if (j && j.ok === false) throw new Error(j.error || "request failed"); return j;
+}
+
+// ---------- config / lists ----------
+async function loadConfig(){
+  CFG = await api("/api/config");
+  renderClasses(); renderVideos(); renderStats(CFG.stats);
+}
+function renderClasses(){
+  const counts = (CFG.stats && CFG.stats.per_class) || [];
+  $("clist").innerHTML = CFG.classes.map((c,i)=>`
+    <div class="cls ${i===cls?"active":""}" data-i="${i}">
+      <span class="k">${(i+1)%10}</span><span class="sw" style="background:${COLORS[i]}"></span>
+      <span><div>${c.name}</div><div class="ru">${c.ru}</div></span>
+      <span class="cnt">${counts[i]||0}</span>
+    </div>`).join("");
+  $("clist").querySelectorAll(".cls").forEach(el => el.onclick = () => pickClass(+el.dataset.i));
+}
+function renderVideos(){
+  const f = $("vfilter").value.trim().toLowerCase();
+  $("vlist").innerHTML = CFG.videos.filter(v => !f || v.name.toLowerCase().includes(f)).map(v => {
+    const tag = v.violation === 1 ? `<span class="tag viol">нарушение ${fmtT(v.t)}</span>` : v.violation === 0 ? `<span class="tag">без нарушения</span>` : "";
+    return `<div class="vitem ${cur && cur.name===v.name?"active":""}" data-n="${encodeURIComponent(v.name)}">
+      <span class="n">${v.name.replace(/\.(mov|mp4)$/i,"")}</span>${tag}<span class="badge">${v.saved.length||""}</span></div>`;
+  }).join("");
+  $("vlist").querySelectorAll(".vitem").forEach(el => el.onclick = () => openVideo(decodeURIComponent(el.dataset.n)));
+}
+function renderStats(s){
+  CFG.stats = s;
+  $("hdrStats").textContent = `${s.images} frames saved · ${s.per_class.reduce((a,b)=>a+b,0)} boxes`;
+  $("dsInfo").innerHTML = `${s.images} frames (${s.empty_images} with no objects)<br>saved to <span class="mono">${CFG.out}</span>`;
+  renderClasses();
+}
+$("vfilter").oninput = renderVideos;
+function fmtT(t){ if (t == null) return ""; const m = Math.floor(t/60), s = t - m*60; return m ? `${m}:${String(Math.round(s)).padStart(2,"0")}` : `${Math.round(s)}s`; }
+
+// ---------- video ----------
+function openVideo(name){
+  if (dirty && !confirm("This frame has unsaved boxes. Switch video anyway?")) return;
+  cur = CFG.videos.find(v => v.name === name);
+  $("emptyMsg").style.display = "none"; wrap.style.display = "block";
+  boxes = []; sel = -1; dirty = false; lastLoadedFrame = -1;
+  video.src = "/video/" + encodeURIComponent(name);
+  video.onloadedmetadata = () => { layout(); seekFrame(cur.violation === 1 && cur.t != null ? Math.round(cur.t*cur.fps) : 0); };
+  renderVideos(); renderTimeline();
+}
+const frameNow = () => cur ? Math.min(cur.frames - 1, Math.max(0, Math.floor(video.currentTime * cur.fps + 1e-4))) : 0;
+function seekFrame(f){
+  if (!cur) return;
+  f = Math.max(0, Math.min(cur.frames - 1, f));
+  video.pause();
+  video.currentTime = (f + 0.5) / cur.fps;     // middle of the frame: lands on frame f reliably
+}
+video.addEventListener("seeked", onFrame);
+video.addEventListener("timeupdate", () => { updatePos(); });
+video.addEventListener("play", () => { $("playBtn").textContent = "❚❚"; draw(); });
+video.addEventListener("pause", () => { $("playBtn").textContent = "▶"; seekFrame(frameNow()); });
+
+async function onFrame(){
+  updatePos();
+  const f = frameNow();
+  if (f === lastLoadedFrame) { draw(); return; }
+  const r = await api(`/api/ann?video=${encodeURIComponent(cur.name)}&frame=${f}`);
+  if (r && r.boxes){                                          // saved frame: show what was saved
+    boxes = r.boxes.map(b => ({c:b.c, x1:b.x-b.w/2, y1:b.y-b.h/2, x2:b.x+b.w/2, y2:b.y+b.h/2}));
+    dirty = false;
+  } else if (!$("carry").checked){
+    boxes = []; dirty = false;
+  } else {
+    dirty = boxes.length > 0;                                 // carried boxes are not saved yet
+  }
+  sel = -1; lastLoadedFrame = f;
+  draw(); renderBoxList(); updateStatus();
+}
+function updatePos(){
+  if (!cur) return;
+  const f = frameNow();
+  $("pos").textContent = `frame ${f} / ${cur.frames-1} · ${video.currentTime.toFixed(2)} s`;
+  $("tlHead").style.left = (100 * video.currentTime / (cur.duration || 1)) + "%";
+}
+function updateStatus(){
+  const saved = cur && cur.saved.includes(frameNow());
+  const el = $("frameStatus");
+  el.className = "status " + (dirty ? "dirty" : saved ? "saved" : "");
+  el.textContent = dirty ? "● unsaved" : saved ? "✓ saved" : "not annotated";
+}
+$("playBtn").onclick = () => video.paused ? video.play() : video.pause();
+document.querySelectorAll("[data-step]").forEach(b => b.onclick = () => seekFrame(frameNow() + +b.dataset.step));
+$("violBtn").onclick = jumpViolation;
+function jumpViolation(){ if (cur && cur.t != null) seekFrame(Math.round(cur.t * cur.fps)); else toast("No labelled violation in this video"); }
+
+// ---------- timeline ----------
+function renderTimeline(){
+  const tl = $("tl");
+  tl.querySelectorAll(".tick,.viol").forEach(e => e.remove());
+  if (!cur) return;
+  const D = cur.duration || 1;
+  for (const f of cur.saved){ const d = document.createElement("div"); d.className = "tick"; d.style.left = (100 * (f + .5) / cur.fps / D) + "%"; tl.appendChild(d); }
+  if (cur.t != null){ const d = document.createElement("div"); d.className = "viol"; d.style.left = (100 * cur.t / D) + "%"; d.title = "labelled violation"; tl.appendChild(d); }
+}
+$("tl").onclick = e => { if (!cur) return; const r = $("tl").getBoundingClientRect(); seekFrame(Math.floor((e.clientX - r.left) / r.width * cur.duration * cur.fps)); };
+
+// ---------- layout / drawing ----------
+function layout(){
+  if (!cur || !video.videoWidth) return;
+  const box = $("stagebox"), availH = box.clientHeight - 20, availW = box.clientWidth - 20;
+  const fit = Math.min(availH / video.videoHeight, availW / video.videoWidth);
+  const s = fit * zoom, w = Math.round(video.videoWidth * s), h = Math.round(video.videoHeight * s);
+  wrap.style.width = w + "px"; wrap.style.height = h + "px";
+  const dpr = window.devicePixelRatio || 1;
+  cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr);
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  $("zoomLbl").textContent = Math.round(zoom * 100) + "%";
+  draw();
+}
+window.addEventListener("resize", layout);
+function setZoom(z){ zoom = Math.max(0.5, Math.min(4, z)); layout(); }
+$("zoomIn").onclick = () => setZoom(zoom * 1.25); $("zoomOut").onclick = () => setZoom(zoom / 1.25);
+
+function W(){ return cv.width / (window.devicePixelRatio || 1); }
+function H(){ return cv.height / (window.devicePixelRatio || 1); }
+function draw(){
+  ctx.clearRect(0, 0, W(), H());
+  if (!cur || hidden || !video.paused) return;
+  boxes.forEach((b, i) => {
+    const x = b.x1 * W(), y = b.y1 * H(), w = (b.x2 - b.x1) * W(), h = (b.y2 - b.y1) * H();
+    ctx.lineWidth = i === sel ? 3 : 2; ctx.strokeStyle = COLORS[b.c];
+    ctx.fillStyle = COLORS[b.c] + (i === sel ? "33" : "1a");
+    ctx.fillRect(x, y, w, h); ctx.strokeRect(x, y, w, h);
+    const label = CFG.classes[b.c].name;
+    ctx.font = "600 12px system-ui, sans-serif";
+    const tw = ctx.measureText(label).width + 8;
+    const ly = y > 16 ? y - 16 : y;
+    ctx.fillStyle = COLORS[b.c]; ctx.fillRect(x, ly, tw, 16);
+    ctx.fillStyle = "#000"; ctx.fillText(label, x + 4, ly + 12);
+    if (i === sel){ ctx.fillStyle = "#fff"; for (const [hx, hy] of corners(b)) { ctx.fillRect(hx*W()-4, hy*H()-4, 8, 8); ctx.strokeRect(hx*W()-4, hy*H()-4, 8, 8); } }
+  });
+  if (drag && drag.mode === "new"){
+    const b = drag.box; ctx.setLineDash([5, 4]); ctx.strokeStyle = COLORS[b.c]; ctx.lineWidth = 2;
+    ctx.strokeRect(b.x1*W(), b.y1*H(), (b.x2-b.x1)*W(), (b.y2-b.y1)*H()); ctx.setLineDash([]);
+  }
+}
+const corners = b => [[b.x1,b.y1],[b.x2,b.y1],[b.x1,b.y2],[b.x2,b.y2]];
+function norm(b){ return {c:b.c, x1:Math.max(0,Math.min(b.x1,b.x2)), y1:Math.max(0,Math.min(b.y1,b.y2)), x2:Math.min(1,Math.max(b.x1,b.x2)), y2:Math.min(1,Math.max(b.y1,b.y2))}; }
+function pt(e){ const r = cv.getBoundingClientRect(); return {x:(e.clientX - r.left) / r.width, y:(e.clientY - r.top) / r.height}; }
+function hitCorner(p){
+  if (sel < 0) return -1; const tolX = 8 / W(), tolY = 8 / H();
+  return corners(boxes[sel]).findIndex(([x, y]) => Math.abs(p.x - x) < tolX && Math.abs(p.y - y) < tolY);
+}
+function hitBox(p){ for (let i = boxes.length - 1; i >= 0; i--){ const b = boxes[i]; if (p.x >= b.x1 && p.x <= b.x2 && p.y >= b.y1 && p.y <= b.y2) return i; } return -1; }
+
+cv.addEventListener("pointerdown", e => {
+  if (!cur) return;
+  if (!video.paused) video.pause();
+  cv.setPointerCapture(e.pointerId);
+  const p = pt(e), k = hitCorner(p);
+  if (k >= 0){ const b = boxes[sel]; drag = {mode:"resize", fx: k % 2 ? b.x1 : b.x2, fy: k < 2 ? b.y2 : b.y1}; return; }
+  const i = hitBox(p);
+  if (i >= 0 && !e.shiftKey){ sel = i; drag = {mode:"move", p0:p, b0:{...boxes[i]}}; renderBoxList(); draw(); return; }
+  sel = -1; drag = {mode:"new", p0:p, box:{c:cls, x1:p.x, y1:p.y, x2:p.x, y2:p.y}};
+});
+cv.addEventListener("pointermove", e => {
+  const p = pt(e);
+  if (!drag){ cv.style.cursor = hitCorner(p) >= 0 ? "nwse-resize" : hitBox(p) >= 0 ? "move" : "crosshair"; return; }
+  if (drag.mode === "new"){ drag.box.x2 = p.x; drag.box.y2 = p.y; }
+  else if (drag.mode === "move"){
+    const b0 = drag.b0, w = b0.x2 - b0.x1, h = b0.y2 - b0.y1;
+    let x1 = Math.max(0, Math.min(1 - w, b0.x1 + p.x - drag.p0.x)), y1 = Math.max(0, Math.min(1 - h, b0.y1 + p.y - drag.p0.y));
+    boxes[sel] = {...boxes[sel], x1, y1, x2:x1 + w, y2:y1 + h}; dirty = true;
+  } else if (drag.mode === "resize"){
+    boxes[sel] = norm({c:boxes[sel].c, x1:drag.fx, y1:drag.fy, x2:p.x, y2:p.y}); dirty = true;
+  }
+  draw();
+});
+cv.addEventListener("pointerup", () => {
+  if (!drag) return;
+  if (drag.mode === "new"){
+    const b = norm(drag.box);
+    if ((b.x2 - b.x1) * W() >= 4 && (b.y2 - b.y1) * H() >= 4){ boxes.push(b); sel = boxes.length - 1; dirty = true; }
+  }
+  drag = null; draw(); renderBoxList(); updateStatus();
+});
+
+function renderBoxList(){
+  if (!boxes.length){ $("blist").innerHTML = '<span class="status">none</span>'; return; }
+  $("blist").innerHTML = boxes.map((b, i) => `<div class="b ${i===sel?"sel":""}" data-i="${i}">
+    <span class="sw" style="background:${COLORS[b.c]}"></span>${CFG.classes[b.c].name}
+    <button data-del="${i}" title="Delete box">✕</button></div>`).join("");
+  $("blist").querySelectorAll(".b").forEach(el => el.onclick = e => {
+    const d = e.target.dataset.del;
+    if (d !== undefined){ boxes.splice(+d, 1); sel = -1; dirty = true; updateStatus(); }
+    else sel = +el.dataset.i;
+    renderBoxList(); draw();
+  });
+}
+function pickClass(i){
+  cls = i;
+  if (sel >= 0){ boxes[sel].c = i; dirty = true; updateStatus(); renderBoxList(); draw(); }
+  renderClasses();
+}
+
+// ---------- save / delete / copy ----------
+async function save(){
+  if (!cur) return;
+  if (!video.paused){ video.pause(); return; }
+  const f = frameNow();
+  const off = document.createElement("canvas");
+  off.width = video.videoWidth; off.height = video.videoHeight;
+  off.getContext("2d").drawImage(video, 0, 0);
+  const image = off.toDataURL("image/jpeg", 0.95);
+  const out = boxes.map(b => ({c:b.c, x:(b.x1+b.x2)/2, y:(b.y1+b.y2)/2, w:b.x2-b.x1, h:b.y2-b.y1}));
+  try {
+    const r = await api("/api/save", {video:cur.name, frame:f, time:video.currentTime, image, boxes:out, user:$("user").value.trim()});
+    if (!cur.saved.includes(f)){ cur.saved.push(f); cur.saved.sort((a,b)=>a-b); }
+    dirty = false; renderStats(r.stats); renderVideos(); renderTimeline(); updateStatus();
+    toast(`Saved ${r.stem} · ${out.length} box${out.length===1?"":"es"}`);
+    const adv = +$("advance").value;
+    if (adv) { lastLoadedFrame = -1; seekFrame(f + adv); }
+  } catch(err){ toast("Save failed: " + err.message); }
+}
+async function delFrame(){
+  if (!cur) return; const f = frameNow();
+  if (!cur.saved.includes(f)){ toast("This frame is not saved"); return; }
+  if (!confirm(`Delete the saved image and labels of frame ${f}?`)) return;
+  const r = await api("/api/delete", {video:cur.name, frame:f});
+  cur.saved = cur.saved.filter(x => x !== f); boxes = []; sel = -1; dirty = false;
+  renderStats(r.stats); renderVideos(); renderTimeline(); renderBoxList(); updateStatus(); draw(); toast("Deleted");
+}
+async function copyLast(){
+  if (!cur) return;
+  const r = await api(`/api/last?video=${encodeURIComponent(cur.name)}&frame=${frameNow()}`);
+  if (!r.boxes){ toast("No earlier saved frame in this video"); return; }
+  boxes = r.boxes.map(b => ({c:b.c, x1:b.x-b.w/2, y1:b.y-b.h/2, x2:b.x+b.w/2, y2:b.y+b.h/2}));
+  sel = -1; dirty = true; renderBoxList(); updateStatus(); draw(); toast(`Copied ${boxes.length} boxes from frame ${r.frame}`);
+}
+function jumpSaved(dir){
+  if (!cur || !cur.saved.length) return; const f = frameNow();
+  const t = dir > 0 ? cur.saved.find(x => x > f) : [...cur.saved].reverse().find(x => x < f);
+  if (t !== undefined) seekFrame(t);
+}
+$("saveBtn").onclick = save; $("delBtn").onclick = delFrame;
+
+// ---------- keys ----------
+document.addEventListener("keydown", e => {
+  if (e.target.tagName === "INPUT" || e.target.tagName === "SELECT") return;
+  const k = e.key;
+  if (k >= "0" && k <= "9"){ const i = k === "0" ? 9 : +k - 1; if (CFG && i < CFG.classes.length) pickClass(i); e.preventDefault(); }
+  else if (k === " "){ $("playBtn").click(); e.preventDefault(); }
+  else if (k === "ArrowRight"){ seekFrame(frameNow() + (e.shiftKey ? 30 : 1)); e.preventDefault(); }
+  else if (k === "ArrowLeft"){ seekFrame(frameNow() - (e.shiftKey ? 30 : 1)); e.preventDefault(); }
+  else if (k === "s" || k === "S" || k === "ы" || k === "Ы"){ save(); e.preventDefault(); }
+  else if (k === "c" || k === "C" || k === "с" || k === "С"){ copyLast(); }
+  else if (k === "j" || k === "J" || k === "о" || k === "О"){ jumpViolation(); }
+  else if (k === "h" || k === "H" || k === "р" || k === "Р"){ hidden = !hidden; draw(); }
+  else if (k === "[" || k === "х"){ jumpSaved(-1); }
+  else if (k === "]" || k === "ъ"){ jumpSaved(1); }
+  else if (k === "Delete" || k === "Backspace"){ if (sel >= 0){ boxes.splice(sel, 1); sel = -1; dirty = true; renderBoxList(); updateStatus(); draw(); } e.preventDefault(); }
+  else if (k === "Escape"){ sel = -1; renderBoxList(); draw(); }
+  else if (k === "+" || k === "="){ setZoom(zoom * 1.25); }
+  else if (k === "-" || k === "_"){ setZoom(zoom / 1.25); }
+});
+window.addEventListener("beforeunload", e => { if (dirty){ e.preventDefault(); e.returnValue = ""; } });
+
+wrap.style.display = "none";
+loadConfig().catch(err => { $("emptyMsg").textContent = "Cannot reach the server: " + err.message; });
+</script>
+</body>
+</html>

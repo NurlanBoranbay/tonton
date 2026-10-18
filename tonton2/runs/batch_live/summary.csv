@@ -1,0 +1,6 @@
+video,gt_verdict,pred_verdict,verdict_match,gt_type,predicted_types,type_match,gt_t,timestamp_abs_error_sec,alarms
+X-1,violation,violation,1,cash_return_violation,cash_return_violation,1,22.0,1.6,cash_return_violation@20.4
+Х-22,violation,violation,1,left_key_violation,left_key_violation,1,14.0,0.9,left_key_violation@14.9
+Х-28,violation,violation,1,left_laptop_violation,left_laptop_violation,1,7.0,3.8,left_laptop_violation@10.8
+Х-46,violation,violation,1,beverage_violation,beverage_violation,1,11.0,0.1,beverage_violation@11.1
+Х-29,no_violation,no_violation,1,,,1,,,

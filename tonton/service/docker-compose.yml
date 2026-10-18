@@ -1,0 +1,30 @@
+name: tonton-service
+services:
+  api:
+    build: .
+    image: tonton-service
+    container_name: tonton-api
+    restart: unless-stopped
+    network_mode: host          # pipeline calls the local VLM on :8901
+    env_file: .env              # API_KEY
+    environment:
+      PORT: "8105"
+      PIPELINE_STRIDE: "3"
+      PIPELINE_DEVICE: "0"
+    volumes:
+      - /nlp/nurlan/tonton:/nlp/nurlan/tonton
+    working_dir: /nlp/nurlan/tonton/service
+    command: sh -c 'exec uvicorn app:app --host 0.0.0.0 --port $$PORT --workers 1'
+    deploy:
+      resources:
+        reservations:
+          devices: [{driver: nvidia, device_ids: ["0"], capabilities: [gpu]}]
+  tunnel:
+    image: tonton-service
+    container_name: tonton-tunnel
+    restart: unless-stopped
+    network_mode: host
+    depends_on: [api]
+    volumes:
+      - /usr/local/bin/cloudflared:/usr/local/bin/cloudflared:ro
+    command: cloudflared tunnel --no-autoupdate --protocol http2 --url http://localhost:8105

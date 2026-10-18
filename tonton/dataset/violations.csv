@@ -1,0 +1,27 @@
+file,timestamp_sec,violation,rule,match
+X-1.mov,22,Hands over only part of the amount the machine counted,"п.31 пп.3–4 (prepare the amount, recount it in front of the client, issue it); п.35",closest
+X-2.mov,10,Counts the money before the client's ID was shown,п.19 пп.1 (visual identification by ID document before acceptance),direct
+Х-4.mov,57,Stacks money from different clients in one pile,п.20 ч.2 (only the current client's cash at the workplace; earlier cash in locked storage); п.21,direct
+Х-11.mov,18,Leaves the key in the safe's keyhole when leaving,п.80 (keys protected from unauthorised use); п.76,closest
+Х-13.mov,47,Puts money into the safe without counting it first,п.19 пп.2 (accept banknotes with sheet-by-sheet count),closest
+Х-15.mov,15,Leaves the cash-collection bag lying in the open,"п.20 ч.2 (cash kept in locked storage); п.24 (bag accepted on the accompanying document, integrity and seal checked)",closest
+Х-17.mov,7,Cash collector brings money (allowed) but must show ID; any second person in the room must show ID,"п.75 (entry only for responsible persons, others by order and escorted); п.24",closest
+Х-18.mov,20,Three people in the room at once while money is being handled,п.75,closest
+Х-20.mov,5,Safe left open (team unsure),п.20 ч.2 (locked storage); п.80,closest
+Х-22.mov,14,Key left in the keyhole (team unsure),п.80; п.76,closest
+Х-24.mov,8,Items left on the desk other than working equipment,п.12 (personal belongings kept outside the cash unit); п.20 ч.2,closest
+Х-26.mov,9,Money left on the desk unattended,п.22 (cashier must not leave before the client is served); п.20 ч.2,direct
+Х-28.mov,7,Laptop left logged in when the cashier leaves,—,none found
+Х-30.mov,13,Client enters the cash area before it is ready,"п.75; V2000020075 п.8 (cash unit isolated, one lockable entrance), п.16 пп.1",closest
+Х-32.mov,5,Door left open after entering (hard to detect with fixed rules),"V2000020075 п.8, п.16 пп.1 (lockable door)",closest
+Х-33.mov,6,"Door left open, someone can look in",V2000020075 п.21 (limit third parties' access to and view of cash collection),closest
+Х-34.mov,13,Client leaves while the operation is still running; money counted without ID,п.35 (client recounts without leaving the cash desk); п.19 пп.1,direct
+Х-38.mov,33,Money still out when the client leaves; the safe must be opened at least once before the client leaves,п.20 ч.2,closest
+Х-40.mov,17,Personal belongings left on the desk,п.12,direct
+Х-44.mov,16,Banknotes of different denominations mixed,п.43 (sorting by denomination),closest
+Х-46.mov,11,Drinks or personal belongings put on the desk with money,п.12,direct
+Х-47.mov,68,Different clients' money mixed,п.20 ч.2; п.21 (each deposit document accepted separately),direct
+Х-35.mov,7,Accepts the client's cash at 7–8 s without checking the client's ID (team correction 17.10),п.19 пп.1,direct
+Х-19.mov,7,Accepts the client's cash and starts working at 7–8 s before checking the client's ID (team correction 17.10),п.19 пп.1,direct
+Х-37.mov,8,Client deposits cash without giving an ID (team correction 18.10),п.19 пп.1,direct
+Х-39.mov,7,Client deposits cash without giving an ID (team correction 18.10),п.19 пп.1,direct

@@ -1,0 +1,44 @@
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/587 [00:00<?, ?it/s]Loading weights:  81%|████████  | 476/587 [00:00<00:00, 4757.67it/s]Loading weights: 100%|██████████| 587/587 [00:00<00:00, 5079.25it/s]
+X-1.mov 48
+X-2.mov 31
+Х-10.mov 28
+Х-11.mov 48
+Х-12.mov 81
+Х-13.mov 127
+Х-14.mov 282
+Х-15.mov 38
+Х-16.mov 42
+Х-17.mov 26
+Х-18.mov 42
+Х-19.mov 111
+Х-20.mov 20
+Х-21.mov 36
+Х-22.mov 39
+Х-23.mov 33
+Х-24.mov 26
+Х-25.mov 60
+Х-26.mov 36
+Х-27.mov 49
+Х-28.mov 30
+Х-29.mov 31
+Х-3.mov 37
+Х-30.mov 34
+Х-31.mov 44
+Х-32.mov 39
+Х-33.mov 25
+Х-34.mov 32
+Х-35.mov 110
+Х-37.mov 28
+Х-38.mov 114
+Х-39.mov 154
+Х-4.mov 142
+Х-40.mov 47
+Х-43.mov 43
+Х-44.mov 37
+Х-45.mov 63
+Х-46.mov 35
+Х-47.mov 142
+Х-48.mov 140
+Х-5.mov 140
+Х-8.mov 73

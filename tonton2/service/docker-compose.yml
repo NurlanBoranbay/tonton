@@ -1,0 +1,32 @@
+# tonton2 API on port 8107 (tonton keeps 8105) + cloudflared quick tunnel (URL changes when the tunnel container is recreated).
+name: tonton2-service
+services:
+  api:
+    image: tonton2
+    container_name: tonton2-api
+    restart: unless-stopped
+    network_mode: host
+    env_file: .env              # API_KEY
+    environment:
+      PORT: "8107"
+      PIPELINE_STRIDE: "3"
+      PIPELINE_DEVICE: "0"
+      PYTHONPATH: /nlp/nurlan/tonton2
+    volumes:
+      - /nlp/nurlan/tonton2:/nlp/nurlan/tonton2
+      - /nlp/nurlan/tonton:/nlp/nurlan/tonton:ro   # symlinked videos, weights, cached detections
+    working_dir: /nlp/nurlan/tonton2/service
+    command: sh -c 'exec uvicorn server:app --host 0.0.0.0 --port $$PORT --workers 1'
+    deploy:
+      resources:
+        reservations:
+          devices: [{driver: nvidia, device_ids: ["0"], capabilities: [gpu]}]
+  tunnel:
+    image: tonton2
+    container_name: tonton2-tunnel
+    restart: unless-stopped
+    network_mode: host
+    depends_on: [api]
+    volumes:
+      - /usr/local/bin/cloudflared:/usr/local/bin/cloudflared:ro
+    command: cloudflared tunnel --no-autoupdate --protocol http2 --url http://localhost:8107
